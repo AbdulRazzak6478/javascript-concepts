@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the Mouse Event</title>
+        <style type="text/css">
+            h2,button{
+                text-align: center;
+            }
+            #out:hover{
+                background-color: white;
+                color:blue;
+
+            }
+        </style>
+    </head>
+    <body>
+        <h2>This is a paragraph in html body tag</h2>
+        <button onclick="onClick()">Click me</button><br><br>
+        <button onmouseover="onMouseOver()">onmouseover</button><br><br>
+        <button onmouseout="onMouseOut()" id="out">onmouseout</button><br><br>
+        <button onmousedown="onMouseDown()">onmousedown</button><br><br>
+        <button onmouseup="onMouseUp()">onmouseup</button><br><br>
+        <button onmousemove="onMouseMove()" onmouseout="onMouseOut()" >onmousemove</button><br><br>
+        <script type="text/javascript">
+            function onClick(){
+                document.body.style.backgroundColor="blue";
+            }
+            function onMouseOver(){
+                document.body.style.backgroundColor="orange";
+            }
+            function onMouseOut(){
+                document.body.style.backgroundColor="pink";
+                document.getElementsByTagName("h2").style.backgroundColor="white";
+            }
+            function onMouseDown(){
+                document.body.style.backgroundColor="red";
+            }
+            function onMouseUp(){
+                document.body.style.backgroundColor="yellow";
+            }
+            function onMouseMove(){
+                document.body.style.backgroundColor="green";
+            }
+        </script>
+    </body>
+</html>

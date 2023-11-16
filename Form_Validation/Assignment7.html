@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment_7 Form Validation</title>
+        <style type="text/css">
+            h2{
+                text-align: center;
+                color:blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Student Registeration form</h2>
+        <hr><br>
+        <!-- <div name="div1"> -->
+            <form  name="myform2" method="get">
+                <label>Enter Your first : </label>
+                <input type="text" name="first" ><br><br>
+                <label>Enter Your LastName : </label>
+                <input type="text" name="LastName" ><br><br>
+                <label>Enter Your Email :     </label>
+                <input type="email" name="Email" ><br><br>
+                <label>Enter Your Telephone :     </label>
+                <input type="text" name="Telephone" ><br><br>
+                <label>Enter Your Password :     </label>
+                <input type="text" name="Password" ><br><br>
+                <label>Confirm Password :     </label>
+                <input type="text" name="Password2" ><br><br>
+                <input type="submit" value="submit" onClick="validateForm()" ><br><br>
+            </form>
+        <!-- </div> -->
+        <script type="text/javascript">
+            function validateForm()
+            {
+                alert("Working");
+                var first=document.myform2.first.value;
+                alert("first :  "+first);
+                alert(document.myform2.first.value);
+                var LastName=document.myform2.LastName.value;
+                var Email=document.myform2.Email.value;
+                var Telephone=document.myform2.Telephone.value;
+                var password=document.myform2.password.value;
+                var password2=document.myform2.password2.value;
+                if(first==null || first==""){
+                    alert("Enter The first Name ");
+                }
+                 if(LastName==null || LastName=="")
+                {
+                    alert("Enter The last Name ");
+                }
+                if(isNaN(Telephone))
+                {
+                    alert("Enter Valid telephone number");
+                }
+                if((password.length>=6 && password<=16)&& (password.length>=6 && password<=16) && password!=null&&password!="")
+                {
+                    if(password!=password2)
+                    {
+                        alert("confirm password is incorrect ");
+                    }
+                }
+                else{
+                    alert("Enter the valid password");
+                }
+                var atposition=Email.indexOf("@");
+                var dotposition=Email.LastIndexOf(".");
+                if(atposition<1||dotposition<atposition+2||dotposition+2>=Email.length)
+                {
+                    alert("Please Entered the valid Email address");
+                }
+            }
+        </script>
+    </body>
+</html>

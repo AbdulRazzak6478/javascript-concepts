@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question_1 solution</title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            //question_1 solution
+            var bool=false;
+            if(bool)
+            {
+                document.write("<br> the value of bool is: "+bool);
+            }
+            else{
+                document.write("<br> the value of the variable bool is : "+bool);
+            }
+            //Question_2 solution
+            var day=5;
+            if(day==1)document.write("<br> Today is monday ");
+            else if(day==2)document.write("<br> Today is Tuesday ");
+            else if(day==3)document.write("<br> Today is Wednesday ");
+            else if(day==4)document.write("<br> Today is Thursday ");
+            else if(day==5)document.write("<br> Today is friday ");
+            else if(day==6)document.write("<br> Today is saturday ");
+            else if(day==7)document.write("<br> Today is sunday ");
+            else document.write("<br> Plz enter valid day number for identification ");
+            document.write("<br> day identify by system is "+Date.getday);
+            //Question_3 solution
+            switch(day)
+            {
+                case 1:document.write("<br> Monday ");break;
+                case 2:document.write("<br> Tuesday ");break;
+                case 3:document.write("<br> wednesday ");break;
+                case 4:document.write("<br> thursday ");break;
+                case 5:document.write("<br> friday ");break;
+                case 6:document.write("<br> saturday ");break;
+                case 7:document.write("<br> sunday ");break;
+                default:document.write("<br> plz enter valid number for day ");
+            }
+            var arr=["Monday","tuesday","Wednesday","thursday","friday","saturday","sunday"];
+            //for loop
+            document.write("<br> Using for loop ");
+            for(let x=0;x<arr.length;x++)
+            document.write("<br> The day stored at  "+(x+1)+" index is : "+arr[x]);
+            //while loop
+            document.write("<br> Using while loop ");
+            var i=0;
+            while(i<arr.length)
+            {
+                document.write("<br> The day stored at  "+(i+1)+" index is : "+arr[i]);
+                i++;
+            }
+            //Do while loop
+            i=0;
+            document.write("<br> Using do_while_loop ");
+            do{
+                document.write("<br> The day stored at  "+(i+1)+" index is : "+arr[i]);
+                i++;
+            }while(i<arr.length);
+            //using for of loop
+            document.write("<br> Using for_of_loop ");
+            for(y of arr)
+            {
+               document.write("<br>  "+y);
+
+            }
+            function displayName(){
+                alert("Mohammed Abdul Razzak Qureshi");
+            }
+            displayName();
+            var arr2=[3,6,1,9,4];
+            var max=Math.max.apply(this,arr2);
+            document.write("<br> the max number in the arr  "+arr2+" is : "+max);
+            var person={
+                name:"Mohammed Abdul Razzak Qureshi",
+                getName:function(){
+                    return this.name;
+                }
+            }
+            var unboundedName=person.getName;
+            document.write("<br> unboundedName is : "+unboundedName);
+            var boundedgetName=unboundedName.bind(person);
+            document.write("<br> the boundedName value of object is :  "+boundedgetName());
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

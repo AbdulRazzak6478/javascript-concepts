@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the onload event</title>
+        <style type="text/css"></style>
+    </head>
+    <body onload="method()">
+        <h2>this is a heading tag </h2>
+        <p>this is a paragraph tag</p>
+        <br><br><input type="text" value="hello">
+        <div id="bg">asdfghjkl</div>
+        <script type="text/javascript">
+            document.onload=alert("this is a massage through document.onload");
+            window.onload=alert("this is a massage through window.onload");
+            window.onload=function(){
+                document.getElementById("bg").style.backgroundColor="red";
+                document.getElementById("bg").style.width="300px";
+                document.getElementById("bg").style.height="300px";
+            }
+            // function method(){
+            //     document.getElementById("bg").style.backgroundColor="red";
+            //     document.getElementById("bg").style.width="300px";
+            //     document.getElementById("bg").style.height="300px";
+            // }
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the promise chain</title>
+        <style type="text/css"></style>
+    </head>
+    <body>
+        
+        <script type="text/javascript">
+            let promise=new Promise((resolve,reject)=>{
+                    resolve(1);
+                });
+                promise.then(
+                    function(value)
+                    {
+                        // alert(value);
+                        console.log(value);
+                        return value*3;
+                    },
+                    function(error)
+                    {
+                        alert("number is not generated");
+                    }
+                ).then(
+                    function(value)
+                    {
+                        // alert(value);
+                        console.log(value);
+                        return value*4;
+                    },
+                    function(error)
+                    {
+                        alert("number is not generated");
+                    }
+                ).then(
+                function(value)
+                {
+                    console.log("Factorial of  is : "+value);
+                }
+            );
+        </script>
+    </body>
+</html>

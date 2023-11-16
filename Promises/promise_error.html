@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the promise error handling</title>
+        <style type="text/css"></style>
+    </head>
+    <body>
+        
+        <script type="text/javascript">
+            let authrized=false;
+            // function getuserid(id)
+            // {
+            //     if(id<=0||typeof id!=='number')
+            //     {
+            //         throw new Error("invalid id is generated");
+            //     }
+            //     return new Promise((resolve,reject)=>{
+            //         // reject({
+            //         //     id:id,
+            //         //     username:"abdul"
+            //         // });
+            //         reject({
+            //             id:id,
+            //             username:"abdul"
+            //         });
+            //     });
+            // }
+            // getuserid(34)
+            //     .then(
+            //     user=>console.log(user.username),
+            //     value=>console.log(value.id),
+            //     )
+            //     .catch(err=>console.log(err));
+            
+                
+                function author(id)
+                {
+                    return new Promise((resolve,reject)=>
+                    {
+                    if(!authrized)
+                    {
+                        throw new Error("unauthorized access to the user data");
+                    }
+                    resolve({
+                        id :id,
+                        username:"mohammed"
+                    });
+                });
+            }
+            author(344)
+                .then(
+                user=>console.log(user.username),
+                value=>console.log(value.id),
+                )
+                .catch(err=>console.log("this is error"+err));
+        </script>
+    </body>
+</html>

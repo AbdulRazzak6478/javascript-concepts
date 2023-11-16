@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the scroll</title>
+        <style type="text/css">
+            /* body{
+                text-align: center;
+            } */
+            .scrollable{
+                width: 400px;
+                height: 200px;
+                border:1px solid black;
+                overflow:scroll;
+                font-size: 50px;
+                /* background-color: blue; */
+                /* margin:auto 0; */
+            }
+            </style>
+    </head>
+    <body>
+        <h2>Click buttons to perform scroll </h2>
+        <button  onclick="onClick()">click me (HTML)</button><br><br>
+        <div class="scrollable" onscroll="onScroll()" >
+            this is a div in the web page about the html scroll operation perform
+            this is a div in the web page about the html scroll operation perform
+            this is a div in the web page about the html scroll operation perform
+            this is a div in the web page about the html scroll operation perform
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus totam vero cum nihil. Debitis autem amet dolor laborum illo perspiciatis aut placeat quam perferendis optio nobis quibusdam soluta, est cupiditate?
+         </div>
+            <script type="text/javascript">
+                // document.getElementsByClassName("scrollable").addEventListener("scroll",onScroll);
+                function onScroll(){
+                    document.getElementsByClassName('scrollable').style.color="blue";
+                    document.getElementsByClassName('scrollable').style.backgroundColor="lightgreen";
+                }
+                // document.getElementsByClassName("scrollable").onscroll=()=>{
+                    //     document.getElementsByClassName("scrollable").style.color="blue";
+                    //     document.getElementsByClassName("scrollable").style.backgroundColor="lightgreen";
+                    
+                    // }
+                    function onClick(){
+                    document.getElementsByClassName("scrollable").style.color="blue";
+                    document.getElementsByClassName("scrollable").style.backgroundColor="lightgreen";
+
+                }
+            </script>
+    </body>
+</html>

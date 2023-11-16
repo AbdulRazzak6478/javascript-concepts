@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Method part-4</title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            var arr1=[1,2,3,4,5,6,7,8,9,0];
+            var arr2=Array.of("html","css","javaScript","Bootstrap","reactjs","nodejs","Expressjs");
+            // document.writeln("<br> the arr2 : "+arr2.join("_"));
+            document.writeln("<br> the arr2 : "+arr2);
+            document.writeln("<br>  ");
+            for(x of arr2)
+            {
+                document.writeln("<br>"+x);
+            }
+            arr2.push("nextjs");
+            arr2.push("mongoDB");
+            arr2.push("firebase");
+            document.writeln("<br>  ");
+            for(x of arr2)
+            {
+                document.writeln(x);
+            }
+            const v1=arr2.pop();
+            document.writeln("<br> The pop() Element is : "+v1+"<br>");
+            for(x of arr2)
+            {
+                document.writeln(x);
+            }
+            arr1.reverse();
+            document.writeln("<br>  ");
+            for(x of arr1)
+            {
+                document.writeln(x);
+            }
+            var a=arr1.reduce(function(previous,currentval)
+            {
+                return previous+currentval;
+            });
+            document.writeln("<br> the sum of arr1 elements are : "+a);
+            var arr3=[10,20,25,30,45,49,63];
+            function text(x)
+            {
+                return x==30;
+            }
+            var res=arr3.some(text);
+            document.writeln("<br> the result array : "+res);
+            document.writeln("<br> the shift element : "+arr3.shift());
+            document.writeln("<br> Array Elements are : ");
+            for(x of arr3)
+            {
+                document.writeln(x);
+            }
+            document.writeln("<br> the shift element : "+arr3.shift());
+            document.writeln("<br> Array Elements are : ");
+            for(x of arr3)
+            {
+                document.writeln(x);
+            }
+            document.writeln("<br> the shift element : "+arr3.shift());
+            document.writeln("<br> Array Elements are : ");
+            for(x of arr3)
+            {
+                document.writeln(x);
+            }
+            document.writeln("<br> the shift element : "+arr3.shift());
+            document.writeln("<br> Array Elements are : ");
+            for(x of arr3)
+            {
+                document.writeln(x);
+            }
+            var arr4=arr1.slice(0,5);
+            document.writeln("<br> the Array elements of arr1 : "+arr4);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

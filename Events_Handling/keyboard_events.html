@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the KeyBoard Events</title>
+        <style type="text/css">
+          body{
+              text-align: center;
+              size: 30px;
+              background-color: rgb(36, 116, 152);
+          }
+        </style>
+    </head>
+    <body>
+        <h2>Example of the keyboard events</h2>
+        <button onkeydown="onKeyDown()">click me for keydown</button><br><br>
+        <button onkeyup="onKeyUp()">click me for keydown</button><br><br>
+        <button>click me for keyup</button><br><br>
+        <br><br><input type="text" onkeydown="onkey()" onkeyup="onkey2()">
+        <script type="text/javascript">
+            function onKeyDown(){
+                alert("onkeyDown event is fired");
+            }
+            function onKeyUp(){
+                alert("onkeyUp event is fired");
+            }
+            function onkey()
+            {
+                document.body.style.backgroundColor="rgb(36, 116, 152)";
+            }
+            function onkey2()
+            {
+                document.body.style.backgroundColor="skyblue";
+            }
+        </script>
+    </body>
+</html>

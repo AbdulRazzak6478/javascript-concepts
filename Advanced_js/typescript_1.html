@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the TypeArray methods</title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            var arr1=[8,7,6,4,56,78,9,23];
+            var sum=arr1.reduce((pre_sum,elemet)=>
+            {
+                console.log(pre_sum);
+                return pre_sum*elemet*pre_sum;
+            });
+            console.log("The sum of all elements of an array is : "+sum);
+            console.log(typeof sum.toString());
+            arr1.forEach(value=>{
+                console.log(value);
+            });
+            var buffer1=new Array(16);
+            buffer1=new Uint16Array(buffer1);
+            buffer1.set([1,2,3,4,5,6],4);
+            console.log(buffer1);
+            var arr3=new Uint8Array([15,18,63,42,2,3,4,5,6,7,8,9]);
+            var arr2=arr3.subarray(3,8);
+            for(value of arr2)
+            {
+                console.log(value);
+            }
+            console.log(arr2);
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

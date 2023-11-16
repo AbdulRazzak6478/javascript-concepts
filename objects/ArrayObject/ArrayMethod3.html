@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Methods part -3</title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            var arr1=[3,4,55,7,8,345,56,5,6,2,4,4,6,7];
+            document.writeln("<br> includes() : "+arr1.includes(6));
+            document.writeln("<br> find() : "+arr1.findIndex(x=>x>5));
+            document.writeln("<br> indexOf() : "+arr1.indexOf(4));
+            document.writeln("<br> isArray() : "+Array.isArray(arr1));
+            document.writeln("<br> isArray() with nums : "+Array.isArray([2,3,4,5]));
+            document.writeln("<br> isArray() : "+Array.isArray(2,3,4,5));
+            document.writeln("<br> join()  : "+arr1.join(" "));
+            document.writeln("<br> the lenght of the array is : "+arr1.length);
+            // arr1=arr1.keys();
+            document.writeln("<br>  ");
+            for(x of arr1)
+            {
+                console.log(x);
+            }
+            document.writeln("<br> the LastIndexOf() : "+arr1.lastIndexOf(4));
+            document.writeln("<br> the map() :x>50 : "+arr1.map(x=>x>34));
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

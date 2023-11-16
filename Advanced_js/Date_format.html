@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the Date format</title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            //ISO(international standards)
+            var d1=new Date("2021-06-21");
+            var d2=new Date("2021-08");
+            var d3=new Date("2021");
+            var d4=new Date("2021-06-20T07:30:00z");
+            document.writeln("<br> <h2>ISO(international Standards)</h2> ");
+            document.writeln("<br> 2021-06-21 Date :  "+d1);
+            document.writeln("<br> 2021-06 Date :  "+d2);
+            document.writeln("<br> 2021 Date :  "+d3);
+            document.writeln("<br> 2021-06-21 T07:30:00 Date :  "+d4);
+            //short date
+            var d5=new Date("08/31/2002");
+            document.writeln("<br><br><h2> Short Date  </h2>");
+            document.writeln(" The date of birth is :  "+d5);
+
+
+            //Long date
+            let d6=new Date("aug 21,2002");
+            let d7=new Date("Aug 21,2002");
+            let d8=new Date("jan 10,2002");
+            let d9=new Date("mar 10,2002");
+            document.writeln("<br><br><h2> Long Date  </h2>");
+            document.writeln("<br> The date of birth is :  "+d6);
+            document.writeln("<br> The date of birth is :  "+d7);
+            document.writeln("<br> The date of birth is :  "+d8);
+            document.writeln("<br> The date of birth is :  "+d9);
+            </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

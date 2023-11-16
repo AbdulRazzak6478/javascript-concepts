@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the class Syntax</title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            /* this class declaration
+            class Employee{
+                constructor(id,name)
+                {
+                    this.id=id;
+                    this.name=name;
+                }
+                details() {
+                  return ("The ID is :"+this.id+" and the name of the Employee is :"+this.name+"<br>");
+                }
+            }
+            var obj1=new Employee(1,"abc");
+            var obj2=new Employee(2,"xyz");
+            document.writeln("<br> The id : "+obj1.id+" the name : "+obj1.name+"<br>");
+            document.writeln("<br> The id : "+obj2.id+" the name : "+obj2.name+"<br>");
+            document.writeln(obj1.details());
+            document.writeln(obj2.details());
+            */
+
+           class Employee{
+               constructor(id,name)
+               {
+                   this.id=id;
+                   this.name=name;
+               }
+               details() {
+                 return ("The ID is :"+this.id+" and the name of the Employee is :"+this.name+"<br>");
+                }
+            }
+            var obj1=new Employee(1,"abc");
+            var obj2=new Employee(2,"xyz");
+            document.writeln("<br>  "+obj1.details());
+            //class redeclaration is not supported
+            // class Employee{
+            //     constructor(id,name)
+            //     {
+            //         this.id=id;
+            //         this.name=name;
+            //     }
+            //     details() {
+            //       return ("The ID is :"+this.id+" and the name of the Employee is :"+this.name+"<br>");
+            //      }
+            //  }
+            var obj3=new Employee(3,"uvw");
+            document.writeln("<br>  "+obj3.details());
+            </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

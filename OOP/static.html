@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the static methods in class</title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            class student{
+               constructor()
+               {
+                   document.writeln("<br> constructor class.method is called : "+student.details2());
+                   document.writeln("<br> constructor constructor.method is called : "+this.constructor.details2());
+               }
+                static details1()
+                {
+                   document.writeln("<br> This is static method 1 is called ");
+                }
+                static details2()
+                {
+                   return ("<br> This is static method 2 is called ");
+                }
+                // static details()
+                // {
+                //    document.writeln("<br> This is static method 2 is called ");
+                // }
+                // static details()
+                // {
+                //    document.writeln("<br> This is a last static method is called ");
+                // }
+                hello()
+                {
+                    document.writeln("<br> hello` ");
+                    student.imsame();
+                }
+                static callmetoo()
+                {
+                    document.writeln("<br> This is function of callmetoo ");
+                    // student.hello();
+                }
+                static imsame()
+                {
+                    document.writeln("<br> this is a function with imsame  ");
+                    this.callmetoo();
+                }
+            }
+            // student.details2();
+            // student.details();
+            var t =new student();
+            // student.imsame();
+            t.hello();
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

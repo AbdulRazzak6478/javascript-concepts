@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the Promise Chaining</title>
+        <style type="text/css"></style>
+    </head>
+    <body>
+        Enter the number : <input type="text" id="num"><br><br>
+        <button id="btn" >Click here to get Factorial</button>
+        <script type="text/javascript">
+            document.getElementById("btn").addEventListener("click",onClick1);
+            function onClick1(){
+            var num=document.getElementById("num").value;
+            var i=1;
+            let promise=new Promise((resolve,reject)=>{
+                if(num<=0||num>='A'||num=="")
+                {
+                    reject(alert("Enter the Number "));
+                }
+                resolve(1);
+            });
+            for(i;i<=num;i++)
+            {
+                promise.then(
+                    function(value)
+                    {
+                        alert(i);
+                        return value*i;
+                    },
+                    function(error)
+                    {
+                        alert("number is not generated");
+                    }
+                );
+            }
+            promise.then(
+                function(value)
+                {
+                    alert("Factorial of "+num+" is : "+value);
+                }
+            );
+            }
+        </script>
+    </body>
+</html>

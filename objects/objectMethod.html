@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Object Method Creation</title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+             var person={
+                firstName:"mohammed",
+                lastName:"qureshi",
+                age:20,
+                eyecolor:"brown",
+                getfunc:function(){
+                    var s="inside function";
+                    document.write("<br> helloworld :"+person.firstName);
+                    return s;
+                }
+
+            }
+            document.write("<br>object  function is  called : "+person.getfunc());
+            function emp(id1,name1,dept1,salary1)
+            {
+                this.id=id1;
+                this.name=name1;
+                this.salary=salary1;
+                this.dept=dept1;
+                this.updateSalary=updateSalary;
+                function updateSalary(newSalary)
+                {
+                    this.salary=newSalary;
+                }
+            }
+            var em=new emp(1,"xyz","cse-A",1000000);
+            for(val in  em)
+            {
+                document.write("<br>  "+em[val]);
+            }
+            document.write("<br> Old Salary : "+em.salary);
+            // document.write("<br> new Salary : "+em.updateSalary(2000000));
+            em.updateSalary(2000000);
+            document.write("<br> new Salary : "+em.salary);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

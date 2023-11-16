@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the Abstraction </title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+           function vehical()
+           {
+               this.vehicalName=vehicalName;
+               throw new Error("you dfghj cannot create instance of Abstract Class");
+           } 
+           vehical.prototype.display=function(){
+               return "Vehical is : "+this.vehicalName;
+           }
+           //    var veh=new vehical("shine");
+           //    document.writeln("<br> details : "+veh.display());
+           function Bike(vehicalName)
+           {
+               this.vehicalName=vehicalName;
+            }
+            Bike.prototype.display=function(){
+                return "Vehical is : "+this.vehicalName;
+            }
+        //    Bike.prototype=Object.create(vehical.prototype);
+           var bike=new Bike("cbr");
+           document.writeln("<br> details : "+bike.display());
+           document.writeln("<br>  ");
+           document.writeln(bike instanceof vehical);
+           document.writeln("<br>  ");
+           document.writeln(bike instanceof Bike);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

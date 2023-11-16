@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the sleep and wait</title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            function sleep(milliseconds)
+            {
+                return new Promise(resolve=>setTimeout(resolve,milliseconds));
+            }
+            const func=async()=>{
+                document.writeln("<br> Welcome to the newpage ");
+                document.writeln("<br> Execution is start ");
+                for(let i=0;i<10;i++)
+                {
+                    await sleep(2000);
+                    document.writeln("<br> The value is  "+(i+1));
+                }
+                document.writeln("<br> Execution is end ");
+            }
+            // func();
+            let sleep2=(milliseconds)=>
+            {
+                return new Promise(resolve=>setTimeout(resolve,milliseconds));
+            }
+            document.writeln("<br> Welcome to the new page of sleep using es6 ecma script language function ");
+            document.writeln("<br> Execution is start  ");
+            sleep2(5000).then(()=>{
+                document.writeln("<br> this is a function is using after recieving resolve statement from the sleep function  ");
+                document.writeln("<br> Execution is end ");
+            });
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

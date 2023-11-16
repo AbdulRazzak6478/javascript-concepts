@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Object Creation ways </title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            /*Cration of Object through letrals*/
+            var person={
+                firstName:"mohammed",
+                lastName:"qureshi",
+                age:20,
+                eyecolor:"brown"
+            }
+            for(value in person)
+            {
+                document.write(person[value]);
+            }
+            document.write("<br> Details of the crated object are  "+person.firstName+" "+person.lastName+" "+person.age+" "+person.eyecolor);
+
+
+            /*Creation of the object through object() */
+            var obj1=new Object();
+            obj1.id=3046;
+            obj1.name="razzak";
+            obj1.salary="1lakh";
+            document.write("<br> obj1.id :  "+obj1.id);
+            document.write("<br> obj1.name :  "+obj1.name);
+            document.write("<br> obj1.salary :  "+obj1.salary);
+            obj1.color="brown";
+            document.write("<br> obj1.color : "+obj1.color);
+            for(val in obj1)
+            {
+                document.write("<br>  "+val);
+            }
+            document.write("<br>  ");
+
+            /*Creation of the object through object constructor*/
+            function emp(id1,name1,dept1,salary1)
+            {
+                this.id=id1;
+                this.name=name1;
+                this.salary=salary1;
+                this.dept=dept1;
+
+            }
+            var em=new emp(23,"xyz","cse",100000);
+            var e=new emp(24,"xyze","cse-a",10000000);
+            document.write("<br> em.id : "+(em.salary=62345));
+            document.write("<br>  ");
+            for(val in em)
+            {
+                document.writeln(em[val]);
+            }
+            // document.write("<br>  ");
+            document.write("<br>  ");
+            for(val in e)
+            {
+                document.writeln(e[val]);
+            }
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

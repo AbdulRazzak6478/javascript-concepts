@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the Exception Handling</title>
+        <style type="text/css"></style>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var fruitArray=["orange","bananas","pineapple","apple","mango"];
+            try{
+                document.writeln("The Fruits stored in fruitArray are : "+fruitArray);
+                throw new Error("car array is not defined in script");
+                document.writeln("The Fruits stored in fruitArray are : "+car);
+            }catch(e)
+            {
+                document.writeln("<br> The Erroe generated above is : "+e);
+            }
+
+        </script>
+    </body>
+</html>

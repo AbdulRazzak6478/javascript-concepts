@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of apply() </title>
+        <style type="text/css">
+            body{
+                text-align: center;
+                text-transform: capitalize;
+                padding: 50px;
+                background-color: blanchedalmond;
+            }
+        </style>
+        <script type="text/javascript">
+            var arr=[7,5,9,1];
+            arr.push.apply(arr,[2,3,4,6,8]);
+            for(x of arr)
+            {
+                document.writeln(x);
+            }
+            var max1=Math.max.apply(this,arr);
+            document.write("<br> the max value fron an array "+max1);
+            document.write("<br> array "+arr);
+            document.write("<br> power of 5^3 :  "+Math.pow(5,3));
+            function emp(id,name)
+            {
+                this.id=id;
+                this.name=name;
+                var s=34;
+            }
+            var person = new emp(46,"qureshi");
+            document.write("<br> person id : "+person.id);
+            document.write("<br> person name : "+person.name);
+            // document.write("<br> person s : "+person.s);
+
+        </script>
+    </head>
+    <body>
+        <h1>using apply()</h1>
+    </body>
+</html>

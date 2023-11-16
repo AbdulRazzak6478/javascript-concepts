@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example  of the closures()</title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            function fun()
+            {
+                console.log("this is a line from the outer function ");
+                var a="outer";
+                var b="inner";
+                function innerfun(){
+                    console.log("this is a line from the inner funtion ");
+                    var name="qureshi";
+                    return name;
+                }
+                return innerfun();
+            }
+            var output=fun();
+            console.log("calling the inner ffuntion throught the return statement of the outer function ");
+            // console.log("the value in the inner funtion is : "+output());
+            console.log("the value in the inner funtion is : "+output);
+            console.log("Example 2");
+            function multiple(a)
+            {
+                console.log("outer funtion ");
+                function mult(b)
+                {
+                    var z= a*b;
+                    console.log("inner function");
+                    return z;
+                }
+                return mult(6);
+            }
+            var out=multiple(5);
+            console.log(out);
+            console.log("this is a line from outside of the function");
+            console.log(out);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

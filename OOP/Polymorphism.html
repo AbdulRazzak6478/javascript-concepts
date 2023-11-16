@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the Polymorphism </title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            // class A{
+            //     display(){
+            //         document.writeln("<br> This is a method form A class  ");
+            //     }
+            // }
+            // class B extends A{
+            //     display(){
+            //         document.writeln("<br> This is a method form B class  ");
+            //     }
+
+            // }
+            function A()
+            {
+
+            }
+            A.prototype.display=function(){
+                return "this is a method from A";
+            }
+            function B()
+            {
+
+            }
+            
+            B.prototype.display=function(){
+                return "this is a method from B";
+            }
+            B.prototype=Object.create(A.prototype);
+            var a1=new B();
+           document.writeln("<br> display of A : "+a1.display());
+            document.writeln("<br>  "+a1.display());
+            var a=[new A(),new B()];
+            a.forEach(function(msg){
+                // msg.display();
+                document.writeln("<br>  "+msg.display());
+            });
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

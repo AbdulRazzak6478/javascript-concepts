@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the Email validation</title>
+        <style type="text/css"></style>
+    </head>
+    <body>
+        <form action="" name="form1" autocomplete="off">
+            <label for="">Enter Your Eamil : </label>
+            <input type="text" name="email" placeholder="abc@xyz.com">;
+            <input type="submit" value="submit" onclick="validateForm()">
+        </form>
+        <script type="text/javascript">
+            function validateForm(){
+                var email=document.form1.email.value;
+                var atposition=email.indexOf("@");
+                var dotposition=email.lastIndexOf(".");
+                if(atposition<1 || dotposition<atposition+2 || dotposition+2>=email.length)
+                    {
+                        alert("Enter The Valid Email Address ");
+                        return ;
+                    }
+                    else{
+                        alert("Email is entered ");
+                    }
+            }
+        </script>
+    </body>
+</html>

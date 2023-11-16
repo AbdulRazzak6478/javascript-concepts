@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the Inheritance</title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            class company{
+                constructor(){
+
+                    this.company="Honda";
+                }
+
+            }
+            class Bike extends company{
+                constructor(name,price,color){
+                    super();
+                    this.name=name;
+                    this.price=price;
+                    this.color=color;
+                }
+                details()
+                {
+                    return "Bike name : "+this.name+" of Price "+this.price+" in "+this.color+" color";
+                }
+            }
+            var bike=new Bike("shine",80000,"black");
+            document.writeln("<br> Company name : "+bike.company);
+            document.writeln("<br> Details String : "+bike.details);
+            document.writeln("<br> Details : "+bike.details());
+            class car extends Bike{
+                constructor(car_name,car_price,car_color)
+                {
+                    super();
+                    this.car_name=car_name;
+                    this.car_price=car_price;
+                    this.car_color=car_color;
+                }
+                car_details()
+                {
+                    return "car name : "+this.car_name+" of Price "+this.car_price+" in "+this.car_color+" color";
+                }
+                
+            }
+            car.prototype=Bike;
+            var car1=new car("swift",12000000,"white");
+            document.writeln("<br> details : "+car1.car_details());
+            car1=new Bike("activa",20000,"brown");
+            
+            document.writeln("<br> details : "+car1.details());
+            document.writeln("<br> car Company :"+car1.company);
+            // document.writeln("<br>  "+car1.car_details());
+            class moment extends Date{
+                constructor(){
+                    super();
+                }
+            }
+            var m=new moment();
+            document.writeln("<br> Date : "+m.getDate()+"-"+(m.getMonth()+1)+"-"+m.getFullYear());
+            document.writeln("<br> date "+m.toTimeString());
+            document.writeln("<br> date : "+m.toDateString());
+            document.writeln("<br> hello ");
+            function Bike2(comp)
+            {
+                this.comp=comp;
+            }
+            Bike2.prototype.getcomp=function(){
+                return this.comp;
+            }
+            var bik=new Bike2("hero");
+            document.writeln("<br> bike2 : "+bik.getcomp());
+            function vehival(name,price)
+            {
+                this.name=name;
+                this.price=price;
+            }
+            vehical.prototype.getdetails=function()
+            {
+                return ("vehical name :  "+this.name+" and price "+this.price);
+            }
+            var bike2=new Bike2("Honda");
+            vehival.prototype=bike2;
+            var vehical=new vehival("shine",120000);
+            document.writeln("<br>  "+vehical.name());
+            document.writeln("<br>  "+vehical.comp());
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

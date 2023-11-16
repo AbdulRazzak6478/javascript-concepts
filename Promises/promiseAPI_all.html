@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the promise all api</title>
+        <style type="text/css"></style>
+    </head>
+    <body>
+        
+        <script type="text/javascript">
+            console.log("hello javascript");
+            new Promise.all([
+                new Promise((resolve,reject)=>setTimeout(()=>resolve(2),3000)),
+                new Promise((resolve,reject)=>setTimeout(()=>resolve(5),2000)),
+                new Promise((resolve,reject)=>setTimeout(()=>resolve(7),1000)),
+            ]).then(
+                user=>console.log(user[0]),
+                value=>console.log("this is an error"+value[1])
+            )
+            .catch(err=>console.log("all api error :    "+err.errors[0]));
+            console.log("sdfghjkjhgfd");
+        </script>
+    </body>
+</html>

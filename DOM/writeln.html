@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the writeln</title>
+        <style type="text/css"></style>
+    </head>
+    <body>
+        <p id="para"></p>
+        <div id="hello"></div>
+        <script type="text/javascript">
+            document.writeln("<br> The is the write object with document  ");
+            var str="javaScript";
+            for(x of str)
+            {
+                document.writeln("<br>  the value of str "+x);
+            }
+            document.getElementById("para").innerHTML="this is a para written in script tag";
+            var x=5678;
+            document.getElementById("hello").innerHTML="this is a div tag"+x;
+        </script>
+    </body>
+</html>

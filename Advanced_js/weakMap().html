@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the WeakMap()</title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            var wm=new WeakMap();
+            var obj1={};
+            var obj2={};
+            var obj3={};
+            var obj4={};
+            var obj5={};
+            var obj6={};
+            wm.set(obj1,"html");
+            wm.set(obj2,"css");
+            wm.set(obj3,"javascript");
+            wm.set(obj4,"Bootstrap");
+            wm.set(obj5,"reactjs");
+            wm.set(obj6,"nodejs");
+            console.log("object 2 value in the map is : "+wm.get(obj2));
+            console.log("object 3 value in the map is : "+wm.get(obj5));
+            console.log("Before deletion the objects from weakMap()");
+            console.log("object 1 is present or not : "+wm.has(obj1));
+            console.log("object 2 is present or not : "+wm.has(obj2));
+            console.log("object 3 is present or not : "+wm.has(obj3));
+            console.log("object 4 is present or not : "+wm.has(obj4));
+            console.log("object 5 is present or not : "+wm.has(obj5));
+            console.log("object 6 is present or not : "+wm.has(obj6));
+            // console.log("object 7 is present or not : "+wm.has(obj7));
+            console.log("Deletion is performed");
+            wm.delete(obj2);
+            wm.delete(obj4);
+            wm.delete(obj6);
+            console.log("after deletion the objects from weakMap()");
+            console.log("object 1 is present or not : "+wm.has(obj1));
+            console.log("object 2 is present or not : "+wm.has(obj2));
+            console.log("object 3 is present or not : "+wm.has(obj3));
+            console.log("object 4 is present or not : "+wm.has(obj4));
+            console.log("object 5 is present or not : "+wm.has(obj5));
+            console.log("object 6 is present or not : "+wm.has(obj6));
+            // console.log("object 7 is present or not : "+wm.has(obj7));
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

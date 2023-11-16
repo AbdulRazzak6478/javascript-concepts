@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the Date Difference</title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            let d1=new Date("08/31/2002");
+            let d2=new Date();
+            let diff=d2-d1;
+            let diff1=d2.getTime()-d1.getTime();
+            document.writeln("<br> The diffrence between d2 and d1 is :  "+diff);
+            document.writeln("<br> The diffrence between d2 and d1 is :  "+diff1);
+            let difference1=diff/(1000*60*60*24*365);
+            document.writeln("<br> The Exact years are :  "+difference1);
+            document.writeln("<br> The Exact years are :  "+Math.floor(difference1));
+
+
+            let difference2=diff/(31536000000);
+            document.writeln("<br> The exact years difference is : "+difference2);
+            document.writeln("<br> The exact years difference is : "+Math.floor(difference2));
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

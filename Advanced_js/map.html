@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the Map methods</title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            let m=new Map();
+            m.set(1,23);
+            m.set(2,34);
+            m.set(3,56);
+            m.set(4,43);
+            m.set(5,65);
+            m.set(6,87);
+            m.set(7,97);
+            console.log("the value at in map at key 5 : "+m.get(5));
+            console.log("the value at in map at key 4 : "+m.get(4));
+            m.forEach(value=>{
+                console.log(value);
+            });
+            m.delete(7);
+            console.log("the map after deleting at key 7 is  : ");
+            m.forEach(value=>{
+                console.log(value);
+            });
+            // var it=m.entries();
+            // var it=m.keys();
+            var it=m.values();
+            // console.log(it.next().value);
+            // console.log(it.next().value);
+            // console.log(it.next().value);
+            // console.log(it.next().value);
+            // console.log(it.next().value);
+            for(let i=0;i<m.size;i++)
+            {
+                console.log(it.next().value);
+            }
+            console.log(it.next().value);
+            // for(x in it.length)
+            // {
+            //     console.log(it.next().value);
+            // }
+            console.log("does map has 56 : "+m.has(5));
+            console.log("does map has 56 : "+m.has(7));
+            console.log("Size of the map is : "+m.size);
+            m.clear();
+            console.log("Size of the map is : "+m.size);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

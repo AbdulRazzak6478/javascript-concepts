@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Solution of the Question 1</title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            var person={
+                firstName:"mohammed",
+                lastName: "qureshi",
+                age:20
+            }
+            // var obj=new person;
+            document.writeln("<br> firstName: "+person.firstName+" , LastName :"+person.lastName+" and age : "+person.age);
+            var arr=new Array(4,5,12,7,3,9);
+            function get(x)
+            {
+                return x>arr[3];
+            }
+            document.writeln("<br> the array elemets are : "+arr);
+            document.writeln("<br> The greater elements than 4th position "+arr.filter(get));
+            document.writeln("<br> The greater elements than 4th position "+arr.flatMap(x=>x>arr[3]));
+            var mxElement=Math.max(4,5,12,7,3,9);
+            document.writeln("<br> Max Element : "+mxElement);
+            var val=0;
+            for(x of arr)
+            {
+                if(x>val)
+                {
+                    val=x;
+                }
+            }
+            document.writeln("<br> The MaxElement : "+val);
+            document.writeln("<br> The Index of the max element is : "+arr.indexOf(val));
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

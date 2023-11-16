@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>function topic practicing</title>
+        <style type="text/css">
+            body{
+                text-align: center;
+                text-transform: capitalize;
+                background-color: wheat;
+                padding:30px;
+            }
+        </style>
+        <script type="text/javascript">
+            function callme(num1,num2)
+            {
+                document.write("<br> the sum of two number of : "+num1+" "+num2+" is "+(num1+num2));
+                return (num1+num2);
+            }
+            function msg(){
+                window.s=callme(5,5);
+                document.write("<br> sum value from msg function : "+s);
+                alert("you called the function of msg through button");
+            }
+            // class car{
+            //     // public:
+            //     var model;
+            //     var color;
+            //     car(model,color)
+            //     {
+            //         this.model=model;
+            //         this.color=color;
+            //     }
+
+            // }
+            // var abc=new car("uxv","brown");
+            // document.write("<br> model of the new created object "+abc.model);
+            var add =new Function("num1","num2","\ for(var i=0;i<=4;i++)\
+            {\
+                document.write(\"<br> hello \");\
+            }\
+             return math.pow(num1,num2)");
+             document.write("<br> the sum of it new object creation Function "+add(5,2));
+            document.write("<br> the sum of it new object creation Function \
+            "+add);
+            document.write("<br> this is a last statement ");
+        </script>
+    </head>
+    <body>
+        <h1>1. calling function through button</h1>
+        <input type="button" onclick="msg()" value="call msg()">
+        <!-- <input type="button" onclick="callme(30,45)" value="callme()"> -->
+    </body>
+</html>

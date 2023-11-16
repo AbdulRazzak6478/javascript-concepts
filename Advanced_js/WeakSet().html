@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the WeakSet()</title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            var ws=new WeakSet();
+            var obj1={};
+            var obj2={};
+            var obj3={};
+            var obj4={};
+            var obj5={};
+            var obj6={};
+            ws.add(obj1);
+            ws.add(obj2);
+            ws.add(obj3);
+            ws.add(obj4);
+            ws.add(obj5);
+            ws.add(obj6);
+            console.log("before deleting the objects from weakset()");
+            console.log("the object 1 is present or not : "+ws.has(obj1));
+            console.log("the object 2 is present or not : "+ws.has(obj2));
+            console.log("the object 3 is present or not : "+ws.has(obj3));
+            console.log("the object 4 is present or not : "+ws.has(obj4));
+            console.log("the object 5 is present or not : "+ws.has(obj5));
+            console.log("the object 6 is present or not : "+ws.has(obj6));
+            ws.delete(obj1);
+            ws.delete(obj3);
+            ws.delete(obj5);
+            console.log("after deleting the objects from weakset()");
+            console.log("the object 1 is present or not : "+ws.has(obj1));
+            console.log("the object 2 is present or not : "+ws.has(obj2));
+            console.log("the object 3 is present or not : "+ws.has(obj3));
+            console.log("the object 4 is present or not : "+ws.has(obj4));
+            console.log("the object 5 is present or not : "+ws.has(obj5));
+            console.log("the object 6 is present or not : "+ws.has(obj6));
+            </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

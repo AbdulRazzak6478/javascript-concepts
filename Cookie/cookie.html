@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the Cookie</title>
+        <style type="text/css"></style>
+    </head>
+    <body>
+        <input type="button" name="set cookie" onclick="setcookie()">
+        <input type="button" name="get cookie" onclick="getcookie()">
+        <script type="text/javascript">
+            function setcookie()
+            {
+                document.cookie="name=marq";
+            }
+            function getcookie()
+            {
+                if(document.cookie.length !=0)
+                {
+                    alert(document.cookie);
+                }
+                else{
+                    alert("There is not cookie yet");
+                }
+            }
+        </script>
+    </body>
+</html>

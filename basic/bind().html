@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of bind()</title>
+        <style type="text/css">
+            body{
+                text-align: center;
+                text-transform: capitalize;
+                padding: 50px;
+                background-color: blanchedalmond;
+                color:blue;
+            }
+        </style>
+        <script type="text/javascript">
+            var website={
+                name:"javascript",
+                getName:function(){
+                   return this.name;
+                }
+            }
+            var website2={
+                name:"react",
+                getName:function(){
+                   return this.name;
+                }
+            }
+            var website3={
+                name:"nextjs",
+                getName:function(){
+                   return this.name;
+                }
+            }
+            var website4={
+                name:"angularjs",
+                getName:function(){
+                   return this.name;
+                }
+            }
+            function add(n1,n2)
+            {
+                return n1+n2;
+            }
+            var unboundedgetName=website.getName;
+            var boundedgetName=unboundedgetName.bind(website2);
+            // var boundedgetName=unboundedgetName.bind(website3);
+            // var boundedgetName=unboundedgetName.bind(website4);
+            document.write("<br> name : "+unboundedgetName);
+            document.write("<br> name : "+boundedgetName());
+            // document.write("<br>function --> String : "+add.toString());
+            // document.write("<br>function --> String : "+add(3,5).toString());
+            // var c='c';
+            // var f=12.5;
+            // var str="string";
+            // document.write("<br> combination of three types :  "+c.toString());
+            // document.write("<br> combination of three types :  "+c+f+str);
+        </script>
+    </head>
+    <body>
+        <h1>this is a example of the bind function</h1>
+    </body>
+</html> 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>String Method part-1</title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            var str="javascript is the must scripting language, javascript is for the web designning and development";
+            document.writeln("<br> The char at 5th position : "+str.charAt(5));
+            document.writeln("<br> The charCode at 5th position : "+str.charCodeAt(5));
+            document.writeln("<br> The concat string with library reactjs : "+(str+"reactjs"));
+            document.writeln("<br> The concat string with library reactjs using concat() : "+(str.concat(" Angular")));
+            document.writeln("<br>the indexof the s char is   : "+str.indexOf('s'));
+            document.writeln("<br>the indexof the s char is   : "+str.lastIndexOf('i'));
+            document.writeln("<br>the indexof the s char is   : "+str.search('html'));
+            document.writeln("<br>the indexof the s char is   : "+str.match('html'));
+            document.writeln("<br> repalce the word javascript to reactjs   : "+str.replace("javascript",'reactjs'));
+            document.writeln("<br> the substr() from str upto length 12 is : "+str.substr(-34,38));
+            document.writeln("<br> the substr() from str upto length 12 is : "+str.substr(10,38));
+            document.writeln("<br> the substring() from str upto length 12 is : "+str.substring(10,39));
+            document.writeln("<br> the slice() from str upto length 12 is : "+str.slice(-40,-1));
+            document.writeln("<br> The uppercase str using toUpperCase() : "+str.toUpperCase());
+            var str1="THIS IS A ANOTHER STRING USING TO CONVERT IN LOWERCASE : ";
+            document.writeln("<br> the str1to lowercase() : "+str1.toLowerCase());
+            // str1=str1.valueOf();
+            // str1=str1.split();
+            document.writeln("<br> the valueOf() : "+str1.split(","));
+            document.writeln("<br>  ");
+            for(x of str1)
+            {
+                document.writeln(x);
+            }
+            var str2="<pre style=\"background-color:cyan;border:1px solid black;color:blue\">           this is a      string  with more    spaces                </pre>";
+            document.writeln("<br> the str2 :  "+str2);
+            document.writeln("<br> the str2 :  "+str2.trim(" "));
+            document.writeln("<br>  "+str2.trim(' '));
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

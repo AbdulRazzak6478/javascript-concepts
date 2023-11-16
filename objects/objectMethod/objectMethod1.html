@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the Various Object Methods</title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            document.write("<h2>Example of the Object.assign() method </h2> ");
+            const obj1={
+                a:1,
+                b:2,
+                c:"object1"
+            }
+            const obj2={
+                x:10,
+                y:20,
+                z:"object2"
+            }
+            console.log(Object.values(obj1));
+            console.log(Object.values(obj2));
+            const obj3=Object.assign({h:10,i:12,j:13,getint:function(id){
+                console.log("id value :"+id);
+                console.log("<br> Hello everyone this is a content in the function of the object3 with inherit properties of object ");
+            }},obj2);
+            console.log(Object.values(obj3));
+            console.log(obj3.getint(3046));
+            function fruit(){
+                this.id=304;
+                this.name="razzak";
+                this.name2="Apple";
+            }
+            function fun(){
+                fruit.call(this);
+            }
+
+            fun.prototype=Object.create(fruit.prototype);
+            const obj4=new fun();
+            obj4.str="hello im a programmmer";
+            console.log(Object.values(obj4));
+            const obj5=Object.freeze(obj2);
+            console.log(Object.values(obj5));
+            // obj1.a=23;
+            // obj1.id=123456789;
+            console.log(Object.values(obj1));
+            obj5.x=13;
+            obj5.c=34;
+            obj5.id=56;
+            console.log(Object.values(obj5));
+            console.log(Object.isFrozen(obj5));
+            console.log(Object.isFrozen(obj1));
+            console.log(Object.isFrozen(obj2));
+            console.log(Object.is(obj2.x,obj5.x));
+            // console.log();
+            console.log(Object.isExtensible(obj2));
+            
+            const obj6=Object.seal(obj1);
+            obj6.a=87;
+            obj6.c="object6";
+            console.log(obj6.a);
+            console.log(obj6.b)
+            console.log(obj6.c)
+            console.log(Object.isSealed(obj6));
+            console.log(Object.isSealed(obj4));
+            console.log(Object.values(obj6));
+            
+            console.log("iudsfhiudfffdjfhgfugjdhvjds"+'nytgvjmhg');
+            console.log("iudsfhiudfffdjfhgfugjdhvjds"+'nytgvjmhg');
+            
+        </script>           
+    </head>
+    <body>
+        
+    </body>
+</html>

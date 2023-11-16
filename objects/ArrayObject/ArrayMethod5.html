@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Method part-5</title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            var arr1=[2,5,1,6,8,7,3,4,9,0];
+            document.writeln("<br> The Arr1 elements are : ");
+            for(x of arr1)
+            document.writeln(x);
+            document.writeln("<br> The Sorted arr1 elements are : ");
+            arr1.sort();
+            for(x of arr1)
+            document.writeln(x);
+            var arr2=arr1.splice(2,4,"html");
+            document.writeln("<br> Added and deletion of elements : ");
+            for(x of arr1)
+            document.writeln(x);
+            document.writeln("<br> deleted array elements are : ");
+            for(x of arr2)
+            document.writeln(x);
+            arr2.unshift(1);
+            document.writeln("<br>  ");
+            for(x of arr2)
+            document.writeln(x);
+            arr2.unshift(0);
+            document.writeln("<br>  ");
+            for(x of arr2)
+            document.writeln(x);
+            arr2.unshift(6);
+            document.writeln("<br>  ");
+            for(x of arr2)
+            document.writeln(x);
+            arr2.unshift(8);
+            document.writeln("<br>  ");
+            for(x of arr2)
+            document.writeln(x);
+            document.writeln("<br> the arr2 elements after toString() : "+arr2.toLocaleString());
+            // const cop=arr2.toString();
+            // for(x of cop)
+            // {
+            //     document.writeln("<br>  "+x);
+            // }
+            var arr3=arr2.values();
+            document.writeln("<br> the array to object iterator : "+arr3.next().value);
+            document.writeln("<br> the array to object iterator : "+arr3.next().value);
+            document.writeln("<br> the array to object iterator : "+arr3.next().value);
+            document.writeln("<br> the array to object iterator : "+arr3.next().value);
+            document.writeln("<br> the array to object iterator : "+arr3.next().value);
+            document.writeln("<br> the array to object iterator : "+arr3.next().value);
+            document.writeln("<br> the array to object iterator : "+arr3.next().value);
+            document.writeln("<br> the array to object iterator : "+arr3.next().value);
+            document.writeln("<br> the array to object iterator : "+arr3.next().value);
+            document.writeln("<br> the array to object iterator : "+arr3.next().value);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

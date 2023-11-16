@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the async...await function</title>
+        <style type="text/css"></style>
+    </head>
+    <body>
+        
+        <script type="text/javascript">
+            async function mydisplay()
+            {
+                let mypromise=new Promise(function(resolve,reject){
+                    setTimeout(() => {
+                        resolve("js is awesome");
+                    }, 3000);
+                });
+                var i=await mypromise;
+                console.log("the string is : "+i);
+                mypromise.then(
+                    user=>console.log("console statement is check")
+                    );
+                    // alert("the string is : "+i);
+                }
+                // mydisplay();
+                async function fun()
+                {
+                    // let prom=Promise.resolve(2);
+                    let my1promise=new Promise(function(resolve,reject){
+                        setTimeout(() => {
+                            resolve("js is awesome");
+                        }, 3000);
+                        // resolve(5);
+                    });
+                var s=await my1promise;
+                alert(s);
+            }
+            fun();
+        </script>
+    </body>
+</html>

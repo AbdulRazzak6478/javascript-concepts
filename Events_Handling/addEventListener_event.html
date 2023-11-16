@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the addEventListener event </title>
+        <style type="text/css"></style>
+    </head>
+    <body>
+        
+        <h2>This web page is about to fire an event which is addEventListener</h2>
+        <button id="btn">Click me to fired a event</button>
+        <p id="para"></p>
+        <script type="text/javascript">
+            document.getElementById('btn').addEventListener("dblclick",fun);
+            function fun()
+            {
+                document.body.style.textAlign="center";
+                document.body.style.backgroundColor="lightgreen";
+                alert("this is a Event fired by addEventListener");
+                document.getElementById("para").innerHTML="after firing event through addEventListener";
+            }
+        </script>
+    </body>
+</html>

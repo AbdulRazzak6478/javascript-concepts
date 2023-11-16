@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the promise </title>
+        <style type="text/css"></style>
+    </head>
+    <body>
+        <h2>Promise Execution</h2>
+        <p id="demo"></p>
+        <script type="text/javascript">
+            function display(value)
+            {
+                document.getElementById("demo").innerHTML="the text is generated through Promise is :   "+value;
+                alert(value);
+            }
+            let promise=new Promise(function(resolve,reject){
+                // var x=0;
+                // if(x==0){
+                //     resolve("statement is true");
+                // }
+                // else{
+                //     reject("error is false");
+                // }
+                setTimeout(function(){
+                    resolve("this is a true statement contain javascript is amazing");
+                },2000);
+                // reject("hello");
+            });
+            promise.then(
+                function(value){
+                    display(value);
+                },
+                user => {
+                    display(user);
+                }
+            );
+        </script>
+    </body>
+</html>

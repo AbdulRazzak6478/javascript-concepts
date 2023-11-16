@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the methods of document object</title>
+        <style type="text/css"></style>
+    </head>
+    <body>
+        <form action=""name="form1">
+            <input type="text" name="firstname" value="learnVern">
+            <input type="button"onclick="msg()" value="click Me!">
+        </form>
+        <div id="div1"></div>
+        <p>This is a p tag in the document </p>
+        <p>This is a p tag in the document </p>
+        <p>This is a p tag in the document </p>
+        <p>This is a p tag in the document </p>
+        <p>This is a p tag in the document </p>
+        <script type="text/javascript">
+            function msg(){
+            var x=document.form1.firstname.value;
+            alert("the value of the input field : "+x);
+            var y=document.getElementsByTagName("p");
+            for(x of y)
+             alert(x.innerText);
+        }
+        document.getElementById("div1").innerHTML="this is a div tag in html";
+        </script>
+    </body>
+</html>

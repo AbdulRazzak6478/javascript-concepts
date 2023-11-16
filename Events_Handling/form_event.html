@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the Form events</title>
+        <style type="text/css"></style>
+    </head>
+    <body>
+        <h2>Example of the form events </h2>
+        <form onsubmit="Submit()">
+
+            onfocus : <input type="text" onfocus="onFocus()"><br><br>
+            onblur : <input type="text" onblur="onBlur()"><br><br>
+            <select name="" id="color" onchange="onChange()">
+                <option value="colorselect">colorselect</option>
+                <option value="black">black</option>
+                <option value="red">red</option>
+                <option value="green">green</option>
+                <option value="blue">blue</option>
+            </select><br><br>
+            <input type="submit" value="Submit">
+        </form>
+            <script type="text/javascript">
+                function onFocus()
+                {
+                    document.body.style.backgroundColor="blue";
+                    alert("onfocus event is fired");
+                }
+                function onBlur()
+                {
+                    document.body.style.backgroundColor="lightgreen";
+                    alert("onBlur event is fired");
+                }
+                function Submit()
+                {
+                    alert("onsubmit event is fired");
+                }
+                function onChange(){
+                    var info=document.getElementById('color').value;
+                    if(info!="colorselect"){
+                    alert("onchange event is fired with color : "+info);
+                    }
+                }
+        </script>
+    </body>
+</html>

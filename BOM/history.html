@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the history Object</title>
+        <style type="text/css">
+            #but{
+                font-size: 20px;
+                height: 50px;
+                width: 200px;
+                padding: 10px;
+                cursor: pointer;
+                /* padding-bottom: 20px; */
+                color: white;
+                background-color: blue;
+            }
+        </style>
+        <script type="text/javascript">
+            function msg1()
+            {
+                document.writeln("<br><h2> The is a web page about history object </h2> ");
+                document.writeln("<br> the number of the web pages in the window : "+history.length);
+            }
+            function msg2()
+            {
+                history.back();
+            }
+            function msg3()
+            {
+                history.forward();
+            }
+            function msg4()
+            {
+                history.go(-2);
+            }
+            function msg5()
+            {
+                history.go(3);
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" name="alert" value="length" onclick="msg1()" id="but">
+        <input type="button" name="alert" value="back" onclick="msg2()" id="but">
+        <input type="button" name="alert" value="forward" onclick="msg3()" id="but">
+        <input type="button" name="alert" value="goback" onclick="msg4()" id="but">
+        <input type="button" name="alert" value="goForward" onclick="msg5()" id="but">
+    </body>
+</html>

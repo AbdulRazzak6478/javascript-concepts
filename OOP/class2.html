@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the class Expression</title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            var emp=class Employee{
+                constructor(id,name)
+                {
+                    this.id=id;
+                    this.name=name;
+                }
+                details()
+                {
+                    return "The id : "+this.id+" and the name of the employee is : "+this.name+"<br>";
+                }
+            }
+            // var Emp1=new Employee(4,"razzak");
+            var Emp1=new emp(4,"razzak");
+            document.writeln("<br> The Emp.details : "+Emp1.details());
+            document.writeln("<br>  "+emp.id);
+            document.writeln("<br>  "+emp.name);
+            var emp1=new emp(1,"abc");
+            var emp2=new emp(2,"xyz");
+            document.writeln("<br>  "+emp1.id);
+            document.writeln("<br>  "+emp1.name);
+            document.writeln("<br>  "+emp2.id);
+            document.writeln("<br>  "+emp2.name);
+            var emp=class{
+                constructor(id,name)
+                {
+                    this.id=id;
+                    this.name=name;
+                }
+                details()
+                {
+                    return "The id : "+this.id+" and the name of the employee is : "+this.name+"<br>";
+                }
+            }
+            var emp3=new emp(3,"uvw");
+            document.writeln("<br> the id "+emp3.id+" and the name : "+emp3.name+"<br>");
+            document.writeln("<br> Emp.details() : "+emp3.details());
+            class student{
+                constructor(id,name,skill)
+                {
+                    this.id=id;
+                    this.name=name;
+                    this.skill=skill;
+                }
+                info()
+                {
+                    return "Student : "+this.name+" ,whose roll number is : "+this.id+" is very good in "+this.skill+" <br>";
+                }
+            }
+            var obj1=new student(1,"razzak","Web Development");
+            document.writeln("<br> Details : "+obj1.info());
+            student.prototype.details=function(){
+                document.writeln("<br> this is a creation of the new method in class ");
+            }
+            student.prototype.other="data structure and algorithms ";
+            document.writeln("<br>other skill :  "+obj1.other);
+            obj1.details();
+            var obj2=new student(3046,"abdul","Data Structures and Algorithms ");
+            document.writeln("<br> info() "+obj2.info());
+            document.writeln("<br> the other added property : "+obj2.other);
+            obj2.details();
+           class parent{
+               constructor()
+               {
+                   this.cs="computer Science";
+               }
+           }
+           class child extends parent{
+               constructor(id,name)
+               {
+                   super();
+                   this.id=id;
+                   this.name=name;
+               }
+               details()
+               {
+                   document.writeln("<br> the id : "+this.id+" <br>name :"+this.name);
+               }
+           }
+           var object=new child(3046,"abdul");
+           object.details();
+           document.writeln("<br>  "+object.cs);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

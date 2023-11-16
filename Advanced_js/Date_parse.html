@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the Date parse </title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            var d1=new Date("01/10/2002");
+            document.writeln("<br> The DOB is :  "+Date.parse(d1));
+            var d2=new Date();
+            document.writeln("<br> The todays date : "+Date.parse(d2));
+            document.writeln("<br> the difference between : "+(d2-d1));
+            let diff=(d2-d1)/(31536000000);
+            document.writeln("<br> Years : "+diff);
+            let d3=new Date("03/12/1975");
+            document.writeln("<br> The invalid date is entered : "+Date.parse(d3));
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

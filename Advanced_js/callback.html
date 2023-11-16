@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the callback</title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            let name="learvern";
+            function getData(a,b,hello,world)
+            {
+                window.z=a*b;
+                console.log("the multiple of the "+a+" and "+b+" is : "+z);
+                hello(z);
+                console.log("this a line print value and accessing the variable outside of the function : "+name);
+                world();
+            }
+            getData(5,6,showdata,discription);
+            console.log("the multile of the below values is : "+z);
+            function showdata(z){
+                console.log("the value after multiplication is : "+z);
+                console.log("this is a method is call through callback");
+            }
+            function discription(){
+                console.log("this is a method of the discription method");
+            }
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

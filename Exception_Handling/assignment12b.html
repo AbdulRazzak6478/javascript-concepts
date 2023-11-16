@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the Exception handling </title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            var x=2345;
+            document.writeln("<br> the value of x "+x);
+            try{
+                // document.writeln("<br> The try block statement ");
+                var z=x/0;
+                // document.writeln("<br> division "+(x/0));
+                // document.writeln("<br> the value of  "+y);
+                // throw "divition using 0 is not supported";
+            }
+            catch(e)
+            {
+                document.writeln("<br> The Exception handle error is " +e);
+            }
+            finally{
+                document.writeln("<br> Exception Handled successfully ");
+            }
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

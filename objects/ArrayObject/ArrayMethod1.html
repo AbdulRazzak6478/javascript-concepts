@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Examples of the Array Method</title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            console.log("concatenated array");
+            
+            var arr1=["html","css","javaScript","reactjs","nodejs"];
+            var arr2=["c","c++","java","python"];
+            arr1=arr1.concat(arr2);
+            console.log(arr1);
+            console.log("copyWithin array");
+            var arr3=arr2.copyWithin(0,1,2);
+            console.log(arr3);
+            console.log("entries array");
+            arr3=arr3.entries();
+            for(value of arr3){
+            console.log(value);
+            }
+            var arr4=[2,4,6,8];
+            function check(value)
+            {
+                return value>1;
+            }
+            console.log("Every element checks with every()method : "+arr4.every(check));
+            
+            var multiarray=[[1,2],[3,4],[5,6]];
+            console.log("multi array without flat() ");
+            
+            for(value of multiarray)
+            {
+                console.log(value);
+                
+            }
+            console.log("multi array with flat() ");
+            multiarray=multiarray.flat();
+            console.log(multiarray);
+            console.log("flatMap() array with multiples of element*element  ");
+            arr4=arr4.flatMap(x=>x*x);
+            console.log(arr4);
+            var arr=new Array();
+            arr[0]="1";
+            arr[1]="23";
+            arr[2]="2345";
+            arr[3]=245;
+            console.log(arr);
+            for(value of arr)
+            {
+                console.log(value);
+                
+            }
+            
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

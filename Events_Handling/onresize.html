@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the onresize Event</title>
+        <style type="text/css"></style>
+    </head>
+    <body onresize="fun()">
+        <h1 id="header"></h1>
+        <p id="para"></p>
+        <script type="text/javascript">
+            var i=0;
+            function fun()
+            {
+                var res="width="+window.outerWidth+"<br>"+"Height="+window.outerHeight;
+                document.getElementById("header").innerHTML=res;
+                var res1=i+=1;
+                document.getElementById("para").innerHTML=res1;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the Encapsulation </title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            class Student{
+                Student()
+                {
+                    var name;
+                    var id;
+                }
+                set(name,id)
+                {
+                    this.name=name;
+                    this.id=id;
+                }
+                get()
+                {
+                    return "The Student "+this.name+"'s ID is : "+this.id;
+                }
+            }
+            // var obj1,obj2=new Student();
+            var obj1=new Student();
+            var obj2=new Student();
+            obj1.set("razzak",3046);
+            obj2.set("shoeab",3050);
+            document.writeln("<br> obj1 : "+obj1.get());
+            document.writeln("<br> obj2 : "+obj2.get());
+            // through prototype
+            function stud(id,name)
+            {
+                var s_id=id;
+                var s_name=name;
+                Object.defineProperty(this,"id",{
+                    get:function(){
+                        return s_id;
+                    },
+                    set:function(s_id)
+                    {
+                        this.s_id=id;
+                    }
+                });
+                Object.defineProperty(this,"name",{
+                    get:function(){
+                        return s_name;
+                    },
+                    set:function(s_name)
+                    {
+                        this.s_name=name;
+                    }
+                });
+            }
+            var s1=new stud(3045,"salman");
+            document.writeln("<br>  "+s1.name);
+            document.writeln("<br>  "+s1.id);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the Dom methods</title>
+        <style type="text/css"></style>
+        <script type="text/javascript">
+            
+        </script>
+    </head>
+    <body>
+        <div class="ClassDiv">fgfhijoi ghj</div>
+        <div class="ClassDiv">dfghjk</div>
+        <div class="ClassDiv">sdf</div>
+        <div class="ClassDiv">sdfg</div>
+        <div class="ClassDiv">sdfg</div>
+        <div id="id"></div>
+        <p name="hello">thfvb ik</p>
+        <script type="text/javascript">
+            var z=document.getElementsByClassName("ClassDiv");
+            for(val of z)
+            {
+                alert(val.innerHTML)
+            }
+            document.getElementById("id").innerHTML="this is a last div";
+            var st=document.getElementsByName("hello");
+
+            alert(st[0].innerText);
+           
+        </script>
+    </body>
+</html>

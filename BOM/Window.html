@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the Window object</title>
+        <style type="text/css">
+            #but{
+                font-size: 20px;
+                height: 50px;
+                width: 200px;
+                padding: 10px;
+                cursor: pointer;
+                /* padding-bottom: 20px; */
+                color: white;
+                background-color: blue;
+            }
+        </style>
+        <script type="text/javascript">
+            function msg1(){
+                alert("this is a window object alert() ");
+            }
+            function msg6(){
+                close();
+            }
+            function msg3(){
+                var temp=prompt("which technology you are learning? ");
+                alert("You are learning "+temp);
+            }
+            function msg4(){
+               open("https://www.google.com");
+            }
+            function msg5(){
+                setTimeout(
+                    function(){
+                        alert("this is a method of browser object which is setTimeout");
+                    },2000);
+            }
+            function msg2(){
+                // alert("this is a window object alert() ");
+                var temp=confirm("are a learning DSA ?");
+                if(temp==true)
+                {
+                    alert("you click ok ");
+                }
+                else{
+                    alert("you click cancel");
+                }
+            }
+            // msg1();
+        </script>
+    </head>
+    <body>
+        <!-- <input type="button" name="alert" value="click here!" onclick="msg1()" id="but"> -->
+        <!-- <input type="button" name="alert" value="click here!" onclick="msg2()" id="but"> -->
+        <!-- <input type="button" name="alert" value="click here!" onclick="msg3()" id="but"> -->
+        <!-- <input type="button" name="alert" value="click here!" onclick="msg4()" id="but"> -->
+        <!-- <input type="button" name="alert" value="click here!" onclick="msg5()" id="but"> -->
+        <input type="button" name="alert" value="click here!" onclick="msg6()" id="but">
+    </body>
+</html>

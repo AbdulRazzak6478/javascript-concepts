@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example of the onclick event</title>
+        <style type="text/css"></style>
+    </head>
+    <body>
+        <h2>Example of the onclick event through 3 ways</h2>
+        <p onclick="inHtml()">this is a para to test onlcik event on this para</p>
+        <p onclick="inHtml()">hellothis is a para to test onlcik event on this para</p>
+        <button onclick="inHtml()">onclick inHtml</button><br><br>
+        <button id="injavascript()">onclick injavascript</button><br><br>
+        <button id="inaddEventListener">onclick inaddEventListener</button><br><br>
+        <script type="text/javascript">
+            function inHtml()
+            {
+                var s=document.getElementsByTagName("p")[1].innerText;
+                alert("onclick in HTML element is fired .<br>"+s);
+            }
+            document.getElementById("injavascript()").onclick=function()
+            {
+                alert("onclick event is fired with in javascript");
+            }
+            document.getElementById("inaddEventListener").addEventListener("click",func);
+            function func(){
+                alert("onclick event is fired through addEventListener");
+                document.body.style.backgroundColor="skyblue";
+                document.body.style.textAlign="center";
+            }
+            
+        </script>
+    </body>
+</html>
